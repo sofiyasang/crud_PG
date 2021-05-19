@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "5688298e-c8d8-4925-bf19-f23d4a119c2e",
+		"name": "SA_task3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Add users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/add?'username'='test''&'password'='test'",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"add"
+					],
+					"query": [
+						{
+							"key": "'username'",
+							"value": "'test''"
+						},
+						{
+							"key": "'password'",
+							"value": "'test'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test1\",\r\n    \"password\": \"test1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/users/update/60a596c49ce3d20cb81e5b8b"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/users/60a596c49ce3d20cb81e5b8b"
+			},
+			"response": []
+		}
+	]
+}
