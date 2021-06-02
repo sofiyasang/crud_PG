@@ -1,6 +1,8 @@
 FROM node:alpine
-COPY package*json ./  
+WORKDIR /app 
+ # change second '.' to '/app'
+ COPY . /app  
 RUN npm install  
-COPY . . 
-EXPOSE 3080  
-CMD ["nodemon","server"]
+RUN npm install -g nodemon
+COPY . .  
+CMD ["nodemon","server.js"]

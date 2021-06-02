@@ -1,0 +1,10 @@
+---
+global:
+  # rest of the damn owl
+
+  - job_name: frontend
+    scrape_interval: 5s
+    scrape_timeout: 2s
+    honor_labels: true
+    static_configs:
+      - targets: ['localhost:3000']
